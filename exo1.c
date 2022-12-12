@@ -10,7 +10,7 @@
 
 // Fonction qui défini le logement x. 
 logement creerlogement(logement logement_x){
-    printf("Premièrement, veuillez renseigner les caractéristques de votre logement :\n");
+    printf("Premièrement, veuillez renseigner les caractéristiques de votre logement :\n");
     printf("Quel est la capacite de votre logement ? \n");
     scanf("%d", &logement_x.capacite);
     printf("Quel est le nombre de chambres de votre logement ? \n");
@@ -19,7 +19,7 @@ logement creerlogement(logement logement_x){
     scanf("%d", &logement_x.salle_bain);
     printf("Quel est le nombre de lits de votre logement ?\n");
     scanf("%d", &logement_x.lit);
-    printf("Quel est le nombre de nuis minimales de votre logement ?\n");
+    printf("Quel est le nombre de nuits minimales de votre logement ?\n");
     scanf("%d", &logement_x.min_nuit);
     printf("Quel est le nombre de nuits maximales de votre logement ?\n");
     scanf("%d", &logement_x.max_nuit);
