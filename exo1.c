@@ -40,7 +40,7 @@ logement creerlogement(logement logement_x){
 //Fonction qui trouve le nombre de logements du fichier de donnees airbnb_donnees_propres
 int trouver_nb_ligne(){
     int nb_ligne = 0;
-    FILE* donnees = fopen("Data/airbnb_donnees_propre.csv", "r");
+    FILE* donnees = fopen("airbnb_donnees_propre.csv", "r");
     char ligne[100];
     while(fgets(ligne, 100, donnees) != NULL){
         nb_ligne++;
@@ -53,7 +53,7 @@ int trouver_nb_ligne(){
 
 //Fonction qui remplit notre tableau de distance en fonction de la caractéristique voulu, et le prix des logements concernés.  
 void remplir_tab_distance(logement tab[], int nb_lignes, logement logement_x, int choix){
-    FILE* donnees = fopen("Data/airbnb_donnees_propre.csv", "rt");   //rt pour ouvrir en lecture, en mode texte. 
+    FILE* donnees = fopen("airbnb_donnees_propre.csv", "rt");   //rt pour ouvrir en lecture, en mode texte. 
     int position_tableau = 0; 
     int position_tableau_prix = 0;
     const char* separateur = ",";                             //Séparateur de chaque donnees dans une ligne du fichier
