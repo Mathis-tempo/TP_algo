@@ -56,17 +56,17 @@ void ajout_activite2(Processus p, POrdonnanceur *tete){
         if (!*tete){                            //Si l'ordonnanceur est vide, 
         *tete = noeud;                          //alors le processus ajouté est placé à la tête de l'ordonnanceur
     }else if (ptr->P.priorite > p.priorite || (ptr->P.priorite == p.priorite && ptr->P.duree > p.duree)){
-        noeud->suiv = ptr;                      //Si le processus ajouté à une priorité plus faible ou si il à une priorité égale mais
-        *tete = noeud;                          //une durée plus faible, alors il est ajouté à la tête
+        noeud->suiv = ptr;                      //Si le processus ajouté à une priorité plus forte ou si il à une priorité égale mais
+        *tete = noeud;                          //une durée plus petite, alors il est ajouté à la tête
     }else{
         while (ptr->suiv != NULL && ptr->suiv->P.priorite < p.priorite ){
-            ptr=ptr->suiv;                      //Tant que la priorité est supérieure à celle du processus suivant, 
+            ptr=ptr->suiv;                      //Tant que la priorité est plus forte que celle du processus suivant, 
         }                                       //on avance dans l'odonnanceur
         while (ptr->suiv != NULL && (ptr->suiv->P.priorite == p.priorite && ptr->suiv->P.duree <= p.duree))
         {                                       //Si la priorité du nouveau processus est égale mais la durée est supérieure
             ptr=ptr->suiv;                      //on avance dans l'ordonnanceur
         }
-        noeud->suiv = ptr->suiv;                //Une fois la place du nouvel ordonnanceur trouvé, on l'insère dans l'odonnanceur
+        noeud->suiv = ptr->suiv;                //Une fois la place du nouveau processus trouvé, on l'insère dans l'odonnanceur
         ptr->suiv = noeud;
     }
 }
@@ -165,7 +165,7 @@ int exo2(){
             {                                                               //demandé avec des valeurs aléatoires
                 sprintf(p.nom,"p%d",i+1);
                 p.duree=1+rand() % (5);                                     //durée allant de 1 à 5 inclus
-                p.priorite=1+rand() % (5);                                  //priorité allant de 1 à 5 inclus
+                p.priorite=rand() % (5+1);                                  //priorité allant de 0 à 5 inclus
                 ajout_activite(p,&O,&queue);                                //Ajout du processus à l'ordonnanceur
             }
             printf("\nVoici les processus dans votre Ordonnanceur :\n");
@@ -214,7 +214,7 @@ int exo2(){
             {                                                               //demandé avec des valeurs aléatoires
                 sprintf(p.nom,"p%d",i+1);
                 p.duree=1+rand() % (5);                                     //durée allant de 1 à 5 inclus
-                p.priorite=1+rand() % (5);                                  //priorité allant de 1 à 5 inclus
+                p.priorite=rand() % (5+1);                                  //priorité allant de 0 à 5 inclus
                 ajout_activite2(p,&O);                                      //Ajout du processus à l'ordonnanceur par priorité
             }
             printf("\nVoici les processus dans votre Ordonnanceur :\n");
