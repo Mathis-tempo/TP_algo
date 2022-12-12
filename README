@@ -1,0 +1,63 @@
+READ ME 
+
+Bonjour, voici le TP d'algorithmie de Mathis TEMPO & Ella GADELLE. 
+
+Pour compiler le programme, il vous faudra utiliser Make. Voici un guide d'utilisation :  
+
+- make all : Compile tous les fichiers du projet. 
+
+- make clean : nettoies les fichiers ".o". 
+
+- make cleanall : nettoies les fichiers .o et l'executable prog. 
+
+
+
+
+# Exercice 1 
+
+Cette algorithme calcule le prix idéal pour votre logement, en fonctnion des caractéristique qui le compose. Vous pourrez entrr les caractéristique de votre logement, et les comparer avec 
+
+plus de 7000 autres logements. Il vous suffira de choisir la caractéristique que vous voulez comparer, ainsi que le nombre de logements à comparer. 
+
+Ps : gardez en tête que plus le nombre de logement choisi est petit, plus la statistique de prix est fiable. 
+
+
+
+
+
+# Exercice 2
+
+
+L'ordonnanceur permet de récupérer un nombre de processus, donné par l’utilisateur ou généré aléatoirement, puis de les exécuter par ordre d’arrivée ou par priorité. 
+
+Au lancement du programme, l’utilisateur devra choisir le type d’ordonnanceur puis la manière dont seront créés les processus.
+
+Les différents ordonnanceurs :
+——————————————
+
+    • Ordonnanceur FIFO : 
+	Les processus sont ajoutés à la suite dans l’ordonnanceur. Le premier processus ajouté sort le premier.
+
+    • Ordonnanceur par Priorité :
+	Lorsqu’un processus est ajouté, on évalue sa priorité avant de l’ajouter à la file de l’ordonnanceur. Le processus à la priorité plus forte sort en premier. 
+	Si deux processus ont la même priorité, c’est celui qui a la plus faible durée qui est exécuté en premier.
+	Si deux processus ont la même priorité et la même durée, c’est le premier arrivé qui est exécuté en premier.
+
+
+L’ajout des processus :
+———————————
+
+    • Création par  l’utilisateur :
+	Si l’utilisateur choisis de créer lui même les processus, il devra leur donner un nom de maximum 10 caractères, une durée et une priorité.
+	Après chaque processus ajouté, il sera demandé à l’utilisateur s’il souhaite ajouter un autre processus ou s’il a terminé. 
+	Lorsqu’il a terminé, l’exécution des processus se fait. 
+
+    • Création aléatoire :
+	Si la création aléatoire est choisie, l’utilisateur devra choisir le nombre de processus à créer. 
+	La durée des processus sera alors générée aléatoirement et sera comprise entre 1 et 5. De même pour la priorité. 
+	Une fois le nombre de processus choisi, l’ordonnancement se lance automatiquement suivie par l’exécution. 
+	
+	
+	
+	
+	
