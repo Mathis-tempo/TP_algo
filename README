@@ -10,6 +10,7 @@ Pour compiler le programme, il vous faudra utiliser Make. Voici un guide d'utili
 
 - make cleanall : nettoies les fichiers .o et l'executable prog. 
 
+Pour compiler le programme, il faut ensuite entrer dans le terminal la commande suivante : "./prog"
 
 
 
