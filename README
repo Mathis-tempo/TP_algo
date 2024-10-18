@@ -1,8 +1,4 @@
-READ ME 
 
-Bonjour, voici le TP d'algorithmie de Mathis TEMPO & Ella GADELLE. 
-
-Pour compiler le programme, il vous faudra utiliser Make. Voici un guide d'utilisation :  
 
 - make all : Compile tous les fichiers du projet. 
 
